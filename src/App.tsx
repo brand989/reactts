@@ -4,9 +4,12 @@ import {products} from './data/products'
 
 
 function App() {
+  const listProducts =  products.map((product) =>
+    <Product key={product.id} product={product} />  );
+
   return (
   <div className='py-2 px-4'>
-    <Product product={products[0]}/>
+    {listProducts}
   </div>
   );
 }
